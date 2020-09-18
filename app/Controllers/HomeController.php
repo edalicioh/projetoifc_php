@@ -14,7 +14,7 @@ class HomeController extends BaseController
     {
         parent::__construct();
         $this->db = Container::getModel('Home');
-        //$this->mediaMovel = Container::getModel("MediaMovel");
+        $this->mediaMovel = Container::getModel('MediaMovel');
     }
 
     public function index()
