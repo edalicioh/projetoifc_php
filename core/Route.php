@@ -60,7 +60,6 @@
                     break;
                 }
             }
-            var_dump($url);
 
             if (isset($found)) {
                 $contro = Container::newController($controller);
