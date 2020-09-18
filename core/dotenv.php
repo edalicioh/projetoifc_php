@@ -3,5 +3,3 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
 $dotenv->load();
 
 
-
-define('env', $_ENV);

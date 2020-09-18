@@ -1,5 +1,12 @@
 <?php
-require_once __DIR__ . '/dotenv.php';
+
+if (getenv('DB_CONNECTION') != null) {
+    define('env', getenv());
+} else {
+    require_once __DIR__ . '/dotenv.php';
+    define('env', $_ENV);
+}
+
 require_once __DIR__ . '/whoops.php';
 
 $routes = require_once __DIR__ . '/../routes/web.php';
