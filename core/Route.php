@@ -19,6 +19,7 @@
 
         private function setRoutes($routes)
         {
+            dd(env);
             foreach ($routes as $route) {
                 $e = explode('@', $route[1]);
                 $r = [env['APP_URL'] . $route[0], $e[0], $e[1]];
@@ -61,7 +62,7 @@
                 }
             }
 
-            dd($found);
+            dd($url);
 
             if (isset($found)) {
                 $contro = Container::newController($controller);
